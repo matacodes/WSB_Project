@@ -16,7 +16,7 @@ public class Student {
 	private int feesTotal;
 
 	/**
-	 * Create new student.
+	 * Create new student. Fees are constant for each student = 5.000 PLN
 	 * 
 	 * @param id      - unique id for each student
 	 * @param name    - name of the student
@@ -30,6 +30,30 @@ public class Student {
 		this.name = name;
 		this.surname = surname;
 		this.grade = grade;
+
+		this.feesPaid = 0;
+		this.feesTotal = 5000;
+
+	}
+
+	/**
+	 * Update student's grade.
+	 * 
+	 * @param grade - new grade of the student
+	 */
+
+	public void setGrade(int grade) {
+		this.grade = grade;
+	}
+
+	/**
+	 * School receives funds as fees. feesPaid should be sum of fees paid.
+	 * 
+	 * @param fees - what student paid
+	 */
+
+	public void newFeesPaid(int fees) {
+		feesPaid = feesPaid + fees;
 
 	}
 
