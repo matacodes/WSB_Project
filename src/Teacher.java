@@ -11,6 +11,7 @@ public class Teacher {
 	private String name;
 	private String surname;
 	private int salary;
+	private int salaryEarned;
 
 	/**
 	 * Create new Teacher object
@@ -26,12 +27,12 @@ public class Teacher {
 		this.name = name;
 		this.surname = surname;
 		this.salary = salary;
-
+		this.salaryEarned = 0;
 	}
 
 	/**
 	 * 
-	 * @return the id for current teacher
+	 * @return name of current teacher
 	 */
 
 	public String getFullName() {
@@ -40,7 +41,7 @@ public class Teacher {
 
 	/**
 	 * 
-	 * @return name of current teacher
+	 * @return the id for current teacher
 	 */
 	public int getId() {
 		return id;
@@ -54,4 +55,22 @@ public class Teacher {
 		return salary;
 	}
 
+	/**
+	 * Salary set.
+	 * 
+	 * @param salary
+	 */
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+
+	/**
+	 * Adds to salaryEarned. Remove from total money earned by School
+	 * 
+	 * @param salary
+	 */
+	public void receiveSalary(int salary) {
+		salaryEarned = salaryEarned + salary;
+		School.updateTotalMoneySpend(salary);
+	}
 }
