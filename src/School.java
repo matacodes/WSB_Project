@@ -1,9 +1,14 @@
-
+/**
+ * 
+ * @author matacodes on  18/06/2020
+ *
+ */
 public class School {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
+	private Teacher teacher;
+	private Student student;
+	private int totalMoneyEarned;
+	private int totalMoneySpend;
+	
 
 }
