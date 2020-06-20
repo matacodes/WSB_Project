@@ -90,7 +90,7 @@ public class School {
 	 * @param moneySpent - money spent by school
 	 */
 	public static void updateTotalMoneySpent(int moneySpent) {
-		totalMoneyEarned = totalMoneyEarned - moneySpent;
+		totalMoneySpent = totalMoneySpent + moneySpent;
 	}
 
 }

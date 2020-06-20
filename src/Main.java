@@ -8,14 +8,14 @@ import java.util.List;
  */
 public class Main {
 	public static void main(String[]args) {
-		Teacher PolP = new Teacher(1, "Piotr", "Pol", 5000);
-		Teacher MatmaM = new Teacher(2, "Marta", "Matma", 4500);
-		Teacher BioloB = new Teacher(3, "Barbara", "Biolo",  4700);
+		Teacher teacher1 = new Teacher(1, "Piotr", "Pol", 2000);
+		Teacher teacher2 = new Teacher(2, "Marta", "Matma", 2500);
+		Teacher teacher3 = new Teacher(3, "Barbara", "Biolo",  1700);
 		
 		List<Teacher> teacherList = new ArrayList<>();
-		teacherList.add(PolP);
-		teacherList.add(MatmaM);
-		teacherList.add(BioloB);
+		teacherList.add(teacher1);
+		teacherList.add(teacher2);
+		teacherList.add(teacher3);
 		
 		Student student1 =new Student(1, "Alex", "Alexowy", 3);
 		Student student2 =new Student(1, "Bartek", "Bartkowy", 2);
@@ -26,9 +26,41 @@ public class Main {
 		studentList.add(student2);
 		studentList.add(student3);
 		
-		School school1 = new School(null, null);
+		School wsb = new School(null, null);
 		
-		System.out.println(school1.getTotalMoneyEarned());
+		System.out.println("WSB zarobi³o: " + wsb.getTotalMoneyEarned());
+	
+		System.out.println(student1.getFullName() + " musi jeszcze zap³aciæ " + student1.getRemainingFees());
+		
+		student1.payFees(1000);
+		student2.payFees(3000);
+		student3.payFees(2000);
+		System.out.println(student1.getFullName() + " wp³aca czesne: " + student1.getFeesPaid());
+		System.out.println(student1.getFullName() + " musi jeszcze zap³aciæ: " + student1.getRemainingFees());
+		System.out.println(student2.getFullName() + " wp³aca czesne: " + student2.getFeesPaid());
+		System.out.println(student2.getFullName() + " musi jeszcze zap³aciæ: " + student2.getRemainingFees());
+		System.out.println(student3.getFullName() + " wp³aca czesne: " + student3.getFeesPaid());
+		System.out.println(student3.getFullName() + " musi jeszcze zap³aciæ: " + student3.getRemainingFees());
+		
+		System.out.println();
+		System.out.println("WSB zarobi³o: " + wsb.getTotalMoneyEarned());
+		
+		teacher1.receiveSalary(teacher1.getSalary());
+		System.out.println("WSB wyp³aci³o " + teacher1.getFullName() + ": " + teacher1.getSalary());
+		System.out.println("WSB wyda³o: " + wsb.getTotalMoneySpent());
+				
+		teacher2.receiveSalary(teacher2.getSalary());
+		System.out.println("WSB wyp³aci³o: " + wsb.getTotalMoneySpent());
+		
+		teacher2.receiveSalary(teacher2.getSalary());
+		System.out.println("WSB wyp³aci³o: " + wsb.getTotalMoneySpent());
+		
+		System.out.println(student1);
+		
+		
+		
+		
+	
 	}
 
 }
