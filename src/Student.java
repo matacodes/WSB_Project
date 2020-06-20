@@ -52,9 +52,57 @@ public class Student {
 	 * @param fees - what student paid
 	 */
 
-	public void newFeesPaid(int fees) {
+	public void updateFeesPaid(int fees) {
 		feesPaid = feesPaid + fees;
 
+	}
+
+	/**
+	 * 
+	 * @return id of the Student
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * 
+	 * @return name of the student
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * 
+	 * @return surname of the student
+	 */
+	public String getSurname() {
+		return surname;
+	}
+
+	/**
+	 * 
+	 * @return grade of the student
+	 */
+	public int getGrade() {
+		return grade;
+	}
+
+	/**
+	 * 
+	 * @return fees paid by the student
+	 */
+	public int getFeesPaid() {
+		return feesPaid;
+	}
+
+	/**
+	 * 
+	 * @return total fees by the student
+	 */
+	public int getFeesTotal() {
+		return feesTotal;
 	}
 
 }
