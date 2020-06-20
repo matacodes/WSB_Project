@@ -1,11 +1,3 @@
-
-/**
- * 
- * @author matacodes 16/06/2020 This class keeps the track of students id, name,
- *         grade and fees.
- *
- */
-
 public class Student {
 
 	private int id;
